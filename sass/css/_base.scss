@@ -1,0 +1,49 @@
+//Um arquivo com "_nomeDoArquivo.scss" é ignorado na hora de compilar...
+
+$text-color: orange;
+$text-color3: lawngreen;
+
+@mixin box-shadow($color) {
+    box-shadow: 3px 3px 4px 1px $color;
+}
+
+@mixin make-bold($bool) {
+    @if $bool == true {
+        font-weight: bold;
+    }
+}
+
+@mixin text-effect($val) {
+    @if $val == danger {
+        color: red;
+    }
+    @else if $val == alert {
+        color: yellow;
+    }
+    @else {
+        color: black;
+    }
+}
+
+body {
+    background-color: #7159c1;
+    color: $text-color; //Caso haja a tentativa de usar $text-color2, aparecerá um erro, pois ela existe em outro escopo.
+}
+
+.container {
+    @include box-shadow(rgba(0, 0, 0, 0.6));
+    width: 200px;
+    height: 200px;
+    $text-color2: white;
+    background-color: $text-color2;
+    $text-color3: papayawhip; //Repare que a variável local nesse caso sobrescreverá a global.
+    p {
+        @include box-shadow(rgba(0, 0, 0, 0.6));
+        background-color: gray;
+        height: 100px;
+        width: 100px;
+        //color: $text-color3;
+        @include text-effect(alert);
+        @include make-bold(true);
+    }
+}
