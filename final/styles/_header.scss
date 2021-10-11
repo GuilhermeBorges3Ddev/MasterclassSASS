@@ -1,12 +1,9 @@
 header {
     background-color: $primary-color;
     &container {
-        display: flex;
-        align-items: center;
+        @extend .flexCenter;
         justify-content: space-between;
-        width: 90%;
-        max-width: 980px;
-        margin: auto;
+        @include boundaries();
     }
     img {
         width: 150px;
@@ -20,7 +17,7 @@ header {
         }
         a {
             text-decoration: none;
-            color: white;
+            color: set-text-color(white);
             text-transform: uppercase;
             font-size: 1.4rem; 
             padding: 2.4rem;
