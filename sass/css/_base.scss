@@ -26,7 +26,7 @@ $text-color3: lawngreen;
 }
 
 body {
-    background-color: #7159c1;
+    background-color: $primary-color;
     color: $text-color; //Caso haja a tentativa de usar $text-color2, aparecerá um erro, pois ela existe em outro escopo.
 }
 
