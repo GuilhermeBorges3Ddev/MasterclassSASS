@@ -1,0 +1,9 @@
+//Se substituirmos o "throught" por "to" no exemplo abaixo teríamos uma laço de 1 até 4.
+@for $i from 1 through 5 {
+    .text-#{$i} {
+        font-size: 15px * $i; 
+    }
+}
+
+//Temos uma espécie de forEach para SASS, que são os items de uma coleção:
+$colors: (color1: blue, color2: red, color3: yellow);
