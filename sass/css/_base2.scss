@@ -7,3 +7,29 @@
 
 //Temos uma espécie de forEach para SASS, que são os items de uma coleção:
 $colors: (color1: blue, color2: red, color3: yellow);
+
+//Toda cor pode ficar mais clara ou mais escura, usando respectivamente as funções: lighten() ou darken()
+@each $key, $color in $colors {
+    .#{$color}-text { color: darken($color, 10); }
+}
+
+//Vamos aplicar herança à partir da classe "flex":
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    @extend .flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+//Aplicando agora referência à um elemento, exemplo: &:hover{}
+p {
+    cursor: pointer;
+    &:hover {
+        cursor: grab;
+    }
+}

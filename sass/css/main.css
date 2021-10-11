@@ -17,4 +17,45 @@
 .text-5 {
   font-size: 75px;
 }
+
+.blue-text {
+  color: #0000cc;
+}
+
+.red-text {
+  color: #cc0000;
+}
+
+.yellow-text {
+  color: #cccc00;
+}
+
+.flex, body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+p {
+  cursor: pointer;
+}
+
+p:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
 /*# sourceMappingURL=main.css.map */
